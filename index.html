@@ -1,0 +1,100 @@
+<html lang="en">
+  <head>
+    <title>JiffyCar Car Rental System</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jiffy.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="style/main.css" />
+  </head>
+  <body>
+    <!-- <div class="text-center bg-light fixed-top"> -->
+      <!-- <h1 class="mb-3 title">JiffyCar Rental System</h1>
+      <h4 class="mb-3">Serving all your rental needs.</h4> -->
+      <!-- <button type="button" class="btn btn-success" onclick="newCar();">
+        Add Car
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="launchHelp();">
+        Help
+      </button> -->
+    <!-- </div>
+
+    <div id="carList" class="margined"></div> -->
+				<img class = "logo" src="Logo.png" alt="alternatetext" style = "float: left;">
+				<div class = "button">
+					<button type="button" class="btn btn-secondary" style = "float: right;" onclick="launchHelp();">
+						Help
+					</button>
+					<button type="button" class="btn btn-info" style = "float: right;" onclick="newCar();">
+						Add Car
+					</button>
+				</div>
+				<h1 class = "title" style = "color: red; text-align: center" >JiffyCar Rental System</h1>
+				<h4  class = "serve" style = "text-align: center">Serving all your rental needs.</h4>
+				<table class="table table-striped">
+					<tr>
+						<th>ID</th>
+						<th>Make</th>
+						<th>Model</th>
+						<th>Year</th>
+						<th>Seating</th>
+						<th>Price</th>
+						<th>RentedStart</th>
+						<th>RentedEnd</th>
+						<th>Action</th>
+					</tr>
+					<tbody id="myTable">		
+					</tbody>
+			</table>
+			<script>
+				var myArray = [
+						{'ID':'1', 'make':'30', 'year':'11/10/1989'},
+						{'ID':'2', 'make':'32', 'year':'10/1/1989'},
+						{'ID':'3', 'make':'29', 'year':'10/14/1990'},
+						{'ID':'4', 'make':'25', 'year':'11/29/1993'},
+						{'ID':'5', 'make':'27', 'year':'3/12/1991'},
+						{'ID':'6', 'make':'24', 'year':'10/31/1995'},
+				]
+				
+				buildTable(myArray)
+			
+			
+			
+				function buildTable(data){
+					var table = document.getElementById('myTable')
+			
+					for (var i = 0; i < data.length; i++){
+						var row = `<tr>
+										<td>${data[i].ID}</td>
+										<td>${data[i].make}</td>
+										<td>${data[i].model}</td>
+										<td>${data[i].year}</td>
+										<td>${data[i].seating}</td>	
+										<td>${data[i].price}</td>
+										<td>${data[i].rentedStart}</td>
+										<td>${data[i].rentedEnd}</td>
+									</tr>`
+						table.innerHTML += row
+			
+
+					}
+				}
+			
+			</script>
+    </div>
+    <script src="js/initialization.js"></script>
+
+    <div id="modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div id="modalHeader" class="modal-header"></div>
+          <div id="modalBody" class="modal-body"></div>
+          <div id="modalFooter" class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
